@@ -2,21 +2,19 @@
 
 using namespace std;
 
-class Simple
-{
+class Simple{
 	public:
-	Simple();
+	Simple(void);
 };
 
-Simple::Simple()
+Simple::Simple(void)
 {
 	cout<<"Simple()::Simple()"<<endl;
 }
 
-
-int main()
+int
+main(void)
 {
-
 	Simple s;
-
+	return (0);
 }
