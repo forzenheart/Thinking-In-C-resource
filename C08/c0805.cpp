@@ -1,21 +1,18 @@
+#include <stdlib.h>
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
-int j[10] = {0};
-
-int main()
+int
+main(void)
 {
-	j[0] = 1;
+	time_t	currentTime;
+	const time_t	firstTime = time(&currentTime);
 
-	for(int i = 0; i < 10; i++)
-	{
-		cout<<j[i];
-	}
-	cout<<endl;
-	const char array[] = "this is  a test";
-	cout<<array<<endl;
-	//c0805.cpp:18:11: error: assignment of read-only location ‘array[0]’
-	//  array[0] = 'a';
+	time(&currentTime);
 
+	//firstTime = currentTime;
+	//只读，常量一旦被赋值就不能被修改了.
+	return 0;	
 }

@@ -1,3 +1,4 @@
+//将c0816.cpp指针用引用进行代替的版本
 void t(int&) {}
 
 void u(const int &cir)
