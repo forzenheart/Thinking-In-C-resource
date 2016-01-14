@@ -6,7 +6,7 @@ main(void)
 	return 0;
 }
 
-//fil1.h
+//file1.h
 //
 //#ifndef _CONST_H
 //#define _CONST_H
