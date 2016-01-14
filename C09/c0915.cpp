@@ -65,17 +65,20 @@ StringStackNoneInline::StringStackNoneInline() : index(0)
 	memset(stack, 0, size * sizeof(string*));
 }
 
+#define RUNTIMES 1000000000
 int main(void)
 {
 	Time	startInline;
-	StringStack	a[2000];
+	for (int i = 0; i < RUNTIMES; i++)
+		StringStack	a;
 	Time	endInline;
 	std::cout<<startInline.ascii()<<std::endl;
 	std::cout<<endInline.ascii()<<std::endl;
 	std::cout<<"Inline constructor:"<<endInline.delta(&startInline)<<std::endl;
 
 	Time	startNoneInline;
-	StringStackNoneInline	b[2000];
+	for (int i = 0; i < RUNTIMES; i++)
+		StringStackNoneInline	b;
 	Time	endNoneInline;
 	std::cout<<startNoneInline.ascii()<<std::endl;
 	std::cout<<endNoneInline.ascii()<<std::endl;
